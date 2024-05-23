@@ -1,10 +1,12 @@
 from flask import Flask
 import os
+import sys
 
 app = Flask(__name__)
 
 @app.route('/')
 def hello():
+    sys.stdout.write('Hello World')
     return "Hello World!"
 
 if __name__ == '__main__':
